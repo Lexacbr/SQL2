@@ -69,14 +69,18 @@ WHERE length > (SELECT AVG(length) FROM film);
 
 ```sql
 USE sakila;
-SELECT YEAR(payment_date) AS year, MONTH(payment_date) AS month, COUNT(DISTINCT rental.rental_id) as rental_count, SUM(amount) as total_payment
+SELECT 
+YEAR(payment_date) AS year, 
+MONTH(payment_date) AS month, 
+COUNT(DISTINCT rental.rental_id) as rental_count, 
+SUM(amount) as total_payment
 FROM payment
 JOIN rental ON payment.rental_id = rental.rental_id
 GROUP BY year, month
 ORDER BY total_payment DESC
 LIMIT 1;
 ```
-![3](scr/3.png)
+![3]()
 
 ---
 
