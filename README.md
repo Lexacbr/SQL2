@@ -40,6 +40,7 @@ HAVING COUNT(customer.customer_id) > 300;
 ```
 
 ![1](scr/1.png)
+
 ------
 
 ### Задание 2
