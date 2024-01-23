@@ -40,8 +40,8 @@ HAVING COUNT(customer.customer_id) > 300;
 ```
 
 ![1](scr/1.png)
+
 ---
-------
 
 ### Задание 2
 
@@ -57,14 +57,16 @@ FROM film
 WHERE length > (SELECT AVG(length) FROM film);
 ```
 ![2](scr/2.png)
+
 ---
 
 ### Задание 3
+
 Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
 
 ---
 ### Ответ 3
----
+
 ```sql
 USE sakila;
 SELECT YEAR(payment_date) AS year, MONTH(payment_date) AS month, COUNT(DISTINCT rental.rental_id) as rental_count, SUM(amount) as total_payment
@@ -75,6 +77,8 @@ ORDER BY total_payment DESC
 LIMIT 1;
 ```
 ![3](scr/3.png)
+
+---
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
