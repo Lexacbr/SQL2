@@ -27,7 +27,6 @@
 ---
 
 ### Ответ 1
----
 ```sql 
 USE sakila;
 SELECT staff.first_name, staff.last_name, city.city, COUNT(customer.customer_id) as total_customers
@@ -45,10 +44,7 @@ HAVING COUNT(customer.customer_id) > 300;
 
 ### Задание 2
 Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
-
----
 ### Ответ 2
----
 ```sql
 USE sakila;
 SELECT COUNT(*) 
