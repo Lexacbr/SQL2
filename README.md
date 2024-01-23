@@ -80,7 +80,7 @@ GROUP BY year, month
 ORDER BY total_payment DESC
 LIMIT 1;
 ```
-![3]()
+![3](scr/3.png)
 
 ---
 
