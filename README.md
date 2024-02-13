@@ -94,3 +94,10 @@ LIMIT 1;
 ### Задание 5*
 
 Найдите фильмы, которые ни разу не брали в аренду.
+
+```sql
+SELECT f.title FROM film f 
+LEFT JOIN inventory i ON i.film_id = f.film_id 
+LEFT JOIN rental r ON r.inventory_id = i.inventory_id 
+WHERE  r.rental_id IS NULL ;
+```
